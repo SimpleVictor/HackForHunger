@@ -1,0 +1,22 @@
+{
+  "timestamp": <unix timestamp>,
+  "session_id": <session id>,
+  "respondent": {
+    "respondent_id": <id string>,
+    "location": <location string>,
+    "location_type": <location type>,
+    "language": <language if known>,
+    "device_type": <device type if known>
+  },
+  "raw_response": <response string (optional)>,
+  "question": {
+    "question_id": <question id>,
+    "question_text": <question text>,
+    "metrics": [
+      {"metric_id": <metric id>, "type": <metric type>, "score": <metric score>},
+      {"metric_id": <metric id>, "type": <metric type>, "score": <metric score>},
+      ...
+      {"metric_id": <metric id>, "type": <metric type>, "score": <metric score>}
+    ]
+  }
+}

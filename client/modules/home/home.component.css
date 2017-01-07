@@ -1,0 +1,45 @@
+.home-container{
+    background-color: #ccc;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.logic-steps{
+    position: relative;
+    margin: auto;
+    top: 5%;
+    display: table;
+}
+
+#FirstConditionContainer{
+    width: 59%;
+    top: 17%;
+    position: absolute;
+    left: 22%;
+
+    height: 71%;
+}
+
+.nextButton{
+    bottom: 4%;
+    position: absolute;
+    right: 3%;
+    transform: scale(1.5);
+}
+
+#OptionTask{
+    position: absolute;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: scale(3);
+    top: 48%;
+    left: 46%;
+}
+
+#NewSetContainer{
+    display: none;
+}
+
+#SavedSetContainer{
+    display: none;
+}

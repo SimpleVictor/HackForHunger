@@ -8,11 +8,15 @@ import { AppComponent }  from './app.component';
 import { routing } from "./routes";
 
 import { HomeModule } from "./modules/home/home.module";
+import {LoginModule} from "./modules/login/login.module";
+import {VisualModule} from "./modules/visual/visual.module";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
+        LoginModule,
+        VisualModule,
         NgSemanticModule,
         HomeModule,
         routing

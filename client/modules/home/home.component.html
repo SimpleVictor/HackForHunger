@@ -1,1 +1,158 @@
-<h1>Hey</h1>
+<div class="home-container">
+
+    <div class="ui top attached demo menu">
+        <a class="item">
+            <i class="sidebar icon"></i>
+            Menu
+        </a>
+    </div>
+    <div class="ui bottom attached segment pushable">
+        <div class="ui inverted labeled icon left inline vertical sidebar menu">
+            <a class="item">
+                <i class="home icon"></i>
+                Home
+            </a>
+            <a class="item">
+                <i class="block layout icon"></i>
+                Topics
+            </a>
+            <a class="item">
+                <i class="smile icon"></i>
+                Friends
+            </a>
+            <a class="item">
+                <i class="calendar icon"></i>
+                History
+            </a>
+        </div>
+        <div class="pusher">
+            <div class="ui basic segment">
+                <h3 class="ui header">Application Content</h3>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui buttons" id="OptionTask">
+        <button class="ui button" (click)="GoToNewSetPage()">New Set</button>
+        <div class="or"></div>
+        <button class="ui positive button" (click)="GoToSavedSet()">Saved Sets</button>
+    </div>
+
+    <!--New SET     New SET             New SET-->
+    <button (click)="PrintObject()">Print OBJ</button>
+    <div id="NewSetContainer" class="ui raised segment">
+        <div class="ui centered grid">
+            <div class="eight wide column">
+                <div class="ui input focus">
+                    <input type="text" placeholder="Search..." #questionText>
+                </div>
+                <button (click)="AddQuestion(questionText.value, 'free_response')">Save Question</button>
+            </div>
+            <div class="four wide column">
+                <h1>test</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--SAVED SET     SAVED SET             SAVED SET-->
+    <div id="SavedSetContainer" class="ui raised segment">
+        <div class="ui centered grid">
+            <div class="eight wide column">
+                <h1>test</h1>
+            </div>
+            <div class="four wide column">
+                <h1>test</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!--MENU-->
+    <div class="ui right demo sidebar inverted vertical menu overlay">
+        <a class="item">
+            1
+        </a>
+        <a class="item">
+            2
+        </a>
+        <a class="item">
+            3
+        </a>
+    </div>
+
+    <div class="ui bottom demo inverted sidebar labeled icon menu overlay">
+        <a class="item">
+            <i class="home icon"></i>
+            Home
+        </a>
+        <a class="item">
+            <i class="block layout icon"></i>
+            Topics
+        </a>
+        <a class="item">
+            <i class="smile icon"></i>
+            Friends
+        </a>
+    </div>
+
+
+    <!--STEPS               STEPS                   STEPS-->
+    <!--<div id="StepsContainer" class="logic-steps">-->
+        <!--<div class="ui steps">-->
+            <!--<div class="completed step">-->
+                <!--<i class="facebook icon iconchanger1"></i>-->
+                <!--<div class="content">-->
+                    <!--<div class="title">Login</div>-->
+                    <!--<div class="description">Accessing your account</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="step">-->
+                <!--<i class="thumbs outline up icon iconchanger2"></i>-->
+                <!--<div class="content">-->
+                    <!--<div class="title">Likes</div>-->
+                    <!--<div class="description">Grab your recent likes</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="step">-->
+                <!--<i class="music icon iconchanger3"></i>-->
+                <!--<div class="content">-->
+                    <!--<div class="title">Music</div>-->
+                    <!--<div class="description">Any artist that you follow</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="step">-->
+                <!--<i class="talk icon iconchanger4"></i>-->
+                <!--<div class="content">-->
+                    <!--<div class="title">Posts</div>-->
+                    <!--<div class="description">Grab recent post/shared</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="step">-->
+                <!--<i class="send icon iconchanger5"></i>-->
+                <!--<div class="content">-->
+                    <!--<div class="title">Finishing Up!</div>-->
+                    <!--<div class="description">Compilling</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--MAIN CONTAINER          MAIN CONTAINER          MAIN CONTAINER-->
+    <!--<div class="ui raised segment" id="FirstConditionContainer">-->
+        <!--<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>-->
+        <!--<button class="ui circular facebook icon button nextButton">-->
+            <!--<i class="facebook icon"></i>-->
+        <!--</button>-->
+    <!--</div>-->
+
+
+
+
+
+
+</div>
