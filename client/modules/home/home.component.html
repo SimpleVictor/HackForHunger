@@ -1,5 +1,169 @@
 <div class="home-container">
+    <!--ADD MODAL              ADD MODAL               ADD MODAl TO -->
+    <div class="ui small modal add-condition-modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Create Condition
+        </div>
 
+        <div class="content">
+            <div class="ui form">
+                <h4 class="ui dividing header">Create your first question!</h4>
+                <div class="field">
+                    <label>Question's Title</label>
+                    <div class="ui input">
+                        <input #conditionTitle type="text">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Question</label>
+                    <textarea #conditionText></textarea>
+                </div>
+                <div class="field">
+
+                    <div class="ui form">
+                        <div class="inline fields">
+                            <label>Response Type</label>
+                            <div class="field" #ConditionCheck>
+                                <div class="ui radio checkbox">
+                                    <input  type="radio" name="frequency" checked="checked">
+                                    <label>Entity</label>
+                                </div>
+                                <!--<div class="field">-->
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="frequency">
+                                    <label>Sentiment</label>
+                                </div>
+                                <!--</div>-->
+                                <!--<div class="field">-->
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="frequency">
+                                    <label>Yes/Maybe/No</label>
+                                </div>
+                                <!--</div>-->
+                                <!--<div class="field">-->
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="frequency">
+                                    <label>Numeric</label>
+                                </div>
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <div class="ui black deny button">
+                Cancel
+            </div>
+            <div class="ui positive right labeled icon button" (click)="questionService.AddCondition(conditionText.value, conditionTitle.value, ConditionCheck)">
+                Submit
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--EDIT MODAL      EDIT MODAL          EDIT MODAL              EDIT MODAL-->
+    <div class="ui small modal edit-qustion">
+        <i class="close icon"></i>
+        <div class="header">
+            Edit Question
+        </div>
+        <div class="content">
+            <div class="ui form">
+                <h4 class="ui dividing header">Give us your feedback</h4>
+                <div class="field">
+                    <label>Feedback</label>
+                    <textarea></textarea>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" checked="checked" name="contact-me" tabindex="0" class="hidden">
+                        <label>It's okay to contact me.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+                Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+                Yep, that's me
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--Create Question MODAL      Create Question MODAL          Create Question MODAL              Create Question MODAL-->
+    <div class="ui small modal create-qustion">
+        <i class="close icon"></i>
+        <div class="header">
+            Question
+        </div>
+        <div class="content">
+            <div class="ui form">
+                <h4 class="ui dividing header">Create your first question!</h4>
+                <div class="field">
+                    <label>Question's Title</label>
+                    <div class="ui input">
+                        <input #questionTitle type="text">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Question</label>
+                    <textarea #questionText></textarea>
+                </div>
+                <div class="field">
+
+                <div class="ui form">
+                        <div class="inline fields">
+                            <label>Response Type</label>
+                            <div class="field" #questionCheck>
+                                <div class="ui radio checkbox">
+                                    <input  type="radio" name="frequency" checked="checked">
+                                    <label>Entity</label>
+                                </div>
+                            <!--<div class="field">-->
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="frequency">
+                                    <label>Sentiment</label>
+                                </div>
+                            <!--</div>-->
+                            <!--<div class="field">-->
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="frequency">
+                                    <label>Yes/Maybe/No</label>
+                                </div>
+                            <!--</div>-->
+                            <!--<div class="field">-->
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="frequency">
+                                    <label>Numeric</label>
+                                </div>
+                            <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+                Cancel
+            </div>
+            <div class="ui positive right labeled icon button" (click)="questionService.AddQuestion(questionText.value, questionTitle.value, questionCheck)">
+                Submit
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--MENUU-->
     <div class="ui top attached demo menu">
         <a class="item">
             <i class="sidebar icon"></i>
@@ -25,18 +189,10 @@
                 History
             </a>
         </div>
-        <div class="pusher">
-            <div class="ui basic segment">
-                <h3 class="ui header">Application Content</h3>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </div>
     </div>
 
 
+    <!--BEGINNING OPTIONS-->
     <div class="ui buttons" id="OptionTask">
         <button class="ui button" (click)="GoToNewSetPage()">New Set</button>
         <div class="or"></div>
@@ -44,20 +200,133 @@
     </div>
 
     <!--New SET     New SET             New SET-->
-    <button (click)="PrintObject()">Print OBJ</button>
-    <div id="NewSetContainer" class="ui raised segment">
-        <div class="ui centered grid">
-            <div class="eight wide column">
-                <div class="ui input focus">
-                    <input type="text" placeholder="Search..." #questionText>
+    <div id="NewSetContainer">
+
+        <!--QUESTIONS TOP           QUESTIONS TOP               QUESTIONS TOP-->
+        <div class="ui green raised segment question-top" *ngIf="questionService.FullList.length >= 1">
+
+            <h4 class="ui horizontal divider header">
+                <i class="bar chart icon"></i>
+                Add Questions
+            </h4>
+
+            <div class="ui grid">
+                <div class="four wide column question-top-border">
+                    <div class="div-box" (click)="CreateQuestionModal()">
+                        <div class="div-box-title" style="pointer-events:none">
+                            <i class="add icon"></i>
+                        </div>
+                    </div>
                 </div>
-                <button (click)="AddQuestion(questionText.value, 'free_response')">Save Question</button>
+                <div class="four wide column question-top-border" *ngFor="let i of questionService.FullList">
+                    <div class="div-box" (click)="SelectQuestion($event, i)">
+                        <div class="div-box-title" style="pointer-events:none">
+                            {{i.question_name}}
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="four wide column">
-                <h1>test</h1>
+        </div>
+
+        <div class="ui green raised segment diagram-container">
+            <!--HEADERS-->
+            <h4 class="ui horizontal divider header diagramHeader">
+                <i class="bar chart icon"></i>
+                Diagram
+            </h4>
+
+
+            <h4 class="ui horizontal divider header">
+                Question
+            </h4>
+            <!--MAIN QUESTION-->
+            <div class="ui card" id="MainQuestion" *ngIf="questionService.CurrentMainQuestion">
+                <span class="hidden-feature" style="visibility: hidden">{{questionService.CurrentMainQuestion.question_id}}</span>
+                <div class="content">
+                    <div class="header">{{questionService.CurrentMainQuestion.question_name}}</div>
+                </div>
+                <div class="content">
+                    <!--<h4 class="ui sub header">Activity</h4>-->
+                    <div class="ui small feed">
+                        <div class="event">
+                            <div class="content">
+                                <div class="summary">
+                                    {{questionService.CurrentMainQuestion.question_text}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra content">
+                    <button class="ui button danger addCondition" (click)="EditQuestionModal()">Edit Condition</button>
+                    <button class="ui button primary addCondition" (click)="OpenAddConditionModal()">Add Condition</button>
+                    <span class="right floated">
+                       Type : {{questionService.CurrentMainQuestion.question_type}}
+                    </span>
+                </div>
+
+            </div>
+
+
+            <h4 class="ui horizontal divider header condition-divider">
+                Condition
+            </h4>
+            <!--CONDITIONS      CONDITIONS          CONDITIONS      CONDITIONS-->
+            <div class="ui cards" id="MainCondition" *ngIf="questionService.cheatlol">
+                <div class="card" *ngFor="let i of questionService.CurrentMainQuestion.conditions">
+                <!--<div class="card" >-->
+                    <div class="content">
+                        <div class="header">{{i.condition_name}}</div>
+                        <!--<div class="header">scascas</div>-->
+                        <div class="description">
+                            <!--sdfsdf-->
+                            {{i.condition_text}}
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui button danger addCondition" (click)="OpenAddConditionModal()"><i class="add icon"></i></button>
+                        <button class="ui button primary addCondition"><i class="minus icon"></i></button>
+                        <span class="right floated">
+                       Type : {{i.condition_type}}
+                            <!--dscfsd-->
+                    </span>
+                    <!--<div class="condition-button">-->
+                        <!--<div class="ui bottom primary attached button condition-button" style="width: 100%;">-->
+                            <!--<i class="add icon"></i>-->
+                        <!--</div>-->
+                        <!--<div class="ui bottom positive attached button condition-button" style="width: 100%;">-->
+                            <!--<i class="minus icon"></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--CONTENT                 CONTENT                 CONTENT-->
+        <div class="ui green raised segment info-container">
+            <h4 class="ui horizontal divider header">
+                <i class="bar chart icon"></i>
+                Content
+            </h4>
+
+
+            <!--CONTENT CONTAINRR       CONTENT CONTAINRR       CONTENT CONTAINRR       vCONTENT CONTAINRR-->
+            <div class="ui relaxed divided list" *ngFor="let i of questionService.FullList">
+                <div class="item">
+                    <i class="large circle notched middle aligned icon"></i>
+                    <div class="content">
+                        <a class="header content-header">{{i.question_name}}</a>
+                        <div class="description">{{i.conditions.length}} Conditions</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!--SAVED SET     SAVED SET             SAVED SET-->
     <div id="SavedSetContainer" class="ui raised segment">
@@ -99,60 +368,5 @@
             Friends
         </a>
     </div>
-
-
-    <!--STEPS               STEPS                   STEPS-->
-    <!--<div id="StepsContainer" class="logic-steps">-->
-        <!--<div class="ui steps">-->
-            <!--<div class="completed step">-->
-                <!--<i class="facebook icon iconchanger1"></i>-->
-                <!--<div class="content">-->
-                    <!--<div class="title">Login</div>-->
-                    <!--<div class="description">Accessing your account</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="step">-->
-                <!--<i class="thumbs outline up icon iconchanger2"></i>-->
-                <!--<div class="content">-->
-                    <!--<div class="title">Likes</div>-->
-                    <!--<div class="description">Grab your recent likes</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="step">-->
-                <!--<i class="music icon iconchanger3"></i>-->
-                <!--<div class="content">-->
-                    <!--<div class="title">Music</div>-->
-                    <!--<div class="description">Any artist that you follow</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="step">-->
-                <!--<i class="talk icon iconchanger4"></i>-->
-                <!--<div class="content">-->
-                    <!--<div class="title">Posts</div>-->
-                    <!--<div class="description">Grab recent post/shared</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="step">-->
-                <!--<i class="send icon iconchanger5"></i>-->
-                <!--<div class="content">-->
-                    <!--<div class="title">Finishing Up!</div>-->
-                    <!--<div class="description">Compilling</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--MAIN CONTAINER          MAIN CONTAINER          MAIN CONTAINER-->
-    <!--<div class="ui raised segment" id="FirstConditionContainer">-->
-        <!--<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>-->
-        <!--<button class="ui circular facebook icon button nextButton">-->
-            <!--<i class="facebook icon"></i>-->
-        <!--</button>-->
-    <!--</div>-->
-
-
-
-
-
 
 </div>

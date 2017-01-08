@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Ge</title>
+    </head>
+    <body>
+
+
+
+
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+
+
+        <script>
+            var mainObj = [
+                {
+                    name:"John",
+                    kids: [
+                        {
+                            name: "Jeffery",
+                            position: "son"
+                        }
+                    ]
+                },
+                {
+                    name:"John",
+                    kids: [
+                        {
+                            name: "Bob",
+                            position: "son"
+                        }
+                    ]
+                },
+                {
+                    name:"John",
+                    kids: [
+                        {
+                            name: "Steve",
+                            position: "son"
+                        }
+                    ]
+                }
+            ];
+
+            var HTML = "";
+            HTML += "<ul>";
+            for(var i = 0; i < mainObj.length; i++){
+                HTML += "<li>";
+                HTML += mainObj[i].name;
+                if(mainObj[i].kids.length >= 1){
+                    HTML += "<ul>";
+                    for(var k = 0; k < mainObj[i].kids.length; k++){
+                        HTML += "<li>";
+                        HTML += 'Name: '+mainObj[i].kids[k].name;
+                        HTML += 'Position: '+mainObj[i].kids[k].position;
+                        HTML += "</li>";
+                    }
+                    HTML += "</ul>";
+                }
+                HTML += "</li>";
+            }
+            HTML += "</ul>";
+            $("body").append(HTML);
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

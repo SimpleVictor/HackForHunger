@@ -10,6 +10,7 @@ import { routing } from "./routes";
 import { HomeModule } from "./modules/home/home.module";
 import {LoginModule} from "./modules/login/login.module";
 import {VisualModule} from "./modules/visual/visual.module";
+import {ApiService} from "./providers/ApiService";
 
 @NgModule({
     imports: [
@@ -22,6 +23,7 @@ import {VisualModule} from "./modules/visual/visual.module";
         routing
     ],
     providers: [
+        ApiService
     ],
     declarations: [ AppComponent ],
     bootstrap:    [ AppComponent ],

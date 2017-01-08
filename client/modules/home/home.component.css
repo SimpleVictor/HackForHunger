@@ -38,8 +38,106 @@
 
 #NewSetContainer{
     display: none;
+    position: absolute;
+    top: 7%;
+    width: 80%;
+    height: 100%;
+    width: 90%;
 }
 
 #SavedSetContainer{
     display: none;
+}
+
+.div-box{
+    /*border: 6px solid #F88379;*/
+    background: rgba(0,0,0,0.8);
+    color: #FFF;
+    height: 96px;
+    padding-top: 30px;
+}
+
+.div-box-title{
+    font-size: 3rem;
+    text-align:center;
+}
+
+.question-top{
+    position: absolute;
+    top: 1%;
+    width: 97%;
+    left: 7%;
+    height: 19%;
+    overflow: auto;
+}
+
+
+
+.question-top-border:hover{
+    border-bottom: 5px solid grey;
+}
+
+.question-top-border:visited{
+    border-bottom: 0;
+}
+
+.diagram-container{
+    position: absolute;
+    top: 20%;
+    width: 70%;
+    left: 7%;
+    height: 69%;
+    overflow-y: auto;
+}
+
+.info-container{
+    position: absolute;
+    top: 20%;
+    width: 25%;
+    right: -4%;
+    height: 69%;
+}
+
+.diagramHeader{
+    margin: 0;
+}
+
+#MainQuestion{
+    top: 3%;
+    width: 76%;
+    left: 13%;
+ }
+
+.addcondition{
+    font-size: 0.8rem;
+}
+
+.header{
+    text-align: center;
+}
+
+.content-header{
+    text-align: left;
+}
+
+.ui.green.raised.segment{
+    border-top: 4px solid #21BA45;
+}
+
+#MainCondition{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 7%;
+    left: 3%;
+    text-align: center;
+}
+
+.condition-button{
+    display: inline-flex;
+}
+
+.condition-divider{
+    padding-top: 30px;
+    margin-bottom: 0;
 }

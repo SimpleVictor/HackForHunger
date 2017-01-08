@@ -1,5 +1,6 @@
 import { NgModule, ModuleWithProviders } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import {QuestionService} from "../home/service/QuestionService";
 
 
 @NgModule({
@@ -13,7 +14,7 @@ export class SharedModule {
         return {
             ngModule: SharedModule,
             providers: [
-
+                QuestionService
             ]
         };
     }
